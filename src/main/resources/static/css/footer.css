@@ -1,0 +1,88 @@
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+  background: #3B5998; 
+  color: white;
+}
+.fa-instagram {
+  background: #fff; 
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+/* 
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media-list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.social-media-list li {
+    margin-right: 10px;
+}
+
+.social-media-list a {
+    background-color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    transition: background-color 0.3s, filter 0.3s; Transition filter instead of color
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.social-media-list a i {
+    filter: invert(100%) grayscale(100%) brightness(500%); Make icons white
+}
+
+.social-media-list a:hover {
+    background-color: #f0f0f0;
+    border-color: #222;
+}
+
+.social-media-list a:hover i {
+    filter: none; Remove filter on hover to show original color
+} */

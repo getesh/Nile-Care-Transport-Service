@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<!-- Include the header fragment -->
+<div th:replace="fragments :: header"></div>
+
+<div class="content">
+    <h2>Main Content</h2>
+    <p>This is the main page content.</p>
+</div>
+
+<!-- Include the footer fragment -->
+<div th:replace="fragments :: footer"></div>
+</body>
+</html>

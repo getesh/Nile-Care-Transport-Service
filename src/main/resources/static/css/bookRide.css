@@ -1,0 +1,306 @@
+.booking-section {
+    padding: 60px 20px;
+    background-color: #f4f7f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    position: relative; /* Add position: relative; */
+}
+
+.booking-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.booking-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.booking-form {
+    width: 60%;
+}
+
+.booking-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.booking-form fieldset {
+    border: 1px solid #e1e8ee;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form legend {
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    background-color: #e8f0fe;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #374151;
+    background-color: #f9fafb;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .booking-section {
+        padding: 40px 15px;
+    }
+
+    .booking-section h2 {
+        font-size: 2em;
+    }
+
+    .booking-content {
+        flex-direction: column;
+    }
+
+    .booking-form {
+        width: 100%;
+    }
+
+    .bookingmap-container {
+    	display: none; /* Hide 
+        /* width: 100%;
+        height: 300px;
+        margin-top: 20px; */
+    }
+
+    .booking-form .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .booking-form fieldset {
+        padding: 20px;
+    }
+}
+
+.booking-form fieldset.address-fieldset {
+    grid-column: span 2;
+}
+
+.booking-form input[type="radio"] {
+    margin-right: 8px;
+}
+
+.booking-form label[for="wheelchair"],
+.booking-form label[for="roundTrip"] {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.booking-form label[for="wheelchair"] + label,
+.booking-form label[for="roundTrip"] + label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    background-color: #fff;
+}
+
+.booking-form input[type="radio"] + label {
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    color: #374151;
+}
+
+.booking-form input[type="radio"]:checked + label {
+    background-color: #e0f2fe;
+    color: #007bff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.map-container {
+    width: 38%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    z-index: 0; /* Add z-index: 0; */
+}
+
+.directions-panel {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.route-info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.route-labels {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.distance-label,
+.time-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.required-star {
+    color: red;
+}
+
+.address-container {
+    display: flex;
+    gap: 20px;
+}
+
+.robot-check-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.robot-check-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.robot-check-visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff; /* White background */
+    border: 1px solid #a0a0a0; /* Light gray border */
+    border-radius: 4px;
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.robot-check-label:hover .robot-check-input ~ .robot-check-visual {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+.robot-check-input:checked ~ .robot-check-visual {
+    background-color: #4285f4; /* Google blue when checked */
+    border-color: #4285f4;
+}
+
+.robot-check-visual:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.robot-check-input:checked ~ .robot-check-visual:after {
+    display: block;
+}
+
+.robot-check-label .robot-check-visual:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+#robotCheckMessage {
+    color: red;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .address-container {
+        flex-direction: column;
+    }
+    .map-container {
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        z-index: 0; /* ensure index 0 for mobile */
+    }
+}

@@ -1,0 +1,52 @@
+
+.about-header {
+    text-align: center;
+    padding: 40px 20px;
+
+}
+.about-main title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: green;
+
+}
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0; /* Remove any margin to the container */
+}
+
+
+.about-image {
+    flex: 1 1 50%; /* Set the image to take up 50% of the container's width */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-text {
+    flex: 1 1 50%; /* Set the text to take up 50% of the container's width */
+    padding: 20px; /* Add padding for text */
+}
+
+.about-text h1 {
+    font-size: 2em; /* Size of the heading */
+    margin-bottom: 10px; /* Space below the heading */
+    color: green;
+}
+
+.about-text p {
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .about-image, .about-text {
+        flex: 1 1 100%; /* Each element takes full width */
+    }
+}

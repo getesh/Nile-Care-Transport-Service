@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/header.css}" rel="stylesheet"  />
+</head>
+<header>
+    <div class="logo-container">
+        <img th:src="@{/images/logo.png}" alt="Nile Care Logo" class="logo">
+    </div>
+    <div class="contact-info">
+        <a href="tel:+15551234567" style="color: white;">
+            <img th:src="@{/images/phone.svg}" alt="Phone Icon" class="contact-icon">
+            <span>555-123-4567</span>
+        </a>
+        <a href="mailto:info@nilecare.com" style="color: white;">
+            <img th:src="@{/images/email.svg}" alt="Email Icon" class="contact-icon">
+            <span>info@nilecare.com</span>
+        </a>
+    </div>
+</header>
+<body>
+    <ul class="topnav">
+
+        <li><a th:href="home">Home</a></li>
+        <li><a th:href="services">Services</a></li>
+        <li><a th:href="about">About</a></li>
+        <li><a th:href="book">Book</a></li>
+        <li style="float:right"><a class="active" href="reserve">Reserve</a></li>
+    </ul>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Company Name</h3>
+                <p>1234 Street Name, City, State, 56789</p>
+                <p>Email: info@company.com | Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

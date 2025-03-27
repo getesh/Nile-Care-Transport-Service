@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride</title>
+    <link th:href="@{/css/bookRide.css}" rel="stylesheet"  />
+</head>
+<body>
+
+<div th:fragment="bookingRide">
+    <!-- Button to open the modal -->
+
+    <div class="container">
+
+    <button id="openModalBtn">Book a Ride</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Book a Ride</h2>
+
+                <form th:action="@{/book-ride}" method="post" th:object="${booking}">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="pickupStreet">Pick-up Street Address:</label>
+                            <input type="text" id="pickupStreet" th:field="*{pickupStreet}" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="pickupCity">Pick-up City:</label>
+                            <input type="text" id="pickupCity" th:field="*{pickupCity}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupState">Pick-up State:</label>
+                            <select id="pickupState" th:field="*{pickupState}" required>
+                                <option value="">Select State</option>
+                                <option value="WA" selected>Washington</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupZip">Pick-up Zip Code:</label>
+                            <input type="text" id="pickupZip" th:field="*{pickupZip}" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="dropoffStreet">Drop-off Street Address:</label>
+                            <input type="text" id="dropoffStreet" th:field="*{dropoffStreet}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dropoffCity">Drop-off City:</label>
+                            <input type="text" id="dropoffCity" th:field="*{dropoffCity}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffState">Drop-off State:</label>
+                            <select id="dropoffState" th:field="*{dropoffState}" required>
+                                <option value="">Select State</option>
+                                <option value="WA" selected>Washington</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffZip">Drop-off Zip Code:</label>
+                            <input type="text" id="dropoffZip" th:field="*{dropoffZip}" required>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" th:field="*{date}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" th:field="*{time}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" th:field="*{phone}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" th:field="*{email}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" th:field="*{name}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="radio" id="roundTripYes" th:field="*{roundTrip}" value="true" checked> Yes
+                        </label>
+                        <label>
+                            <input type="radio" id="roundTripNo"  th:field="*{roundTrip}" value="false"> No
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additionalMessage">Additional Message:</label>
+                        <textarea id="additionalMessage" th:field="*{additionalMessage}" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    <script th:src="@{/js/bookRide.js}"></script>
+</div>
+</div>
+</body>
+</html>

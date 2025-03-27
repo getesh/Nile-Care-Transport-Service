@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nile Care Transportation</title>
+    <link th:href="@{/css/scroll.css}" rel="stylesheet"  />
+    <link th:href="@{/css/bookRide.css}" rel="stylesheet"  />
+     <link th:href="@{/css/footer.css}" rel="stylesheet"  />
+    
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+   
+
+</head>
+<body>
+<!-- 
+<header>
+    <div class="container">
+        <div class="logo-wrapper">
+            <a th:href="@{/}">
+                <img th:src="@{/images/logo.png}" alt="Nile Care Logo" class="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#services2">Reserve</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#book">Book</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+    </div>
+</header> -->
+<header>
+    <div class="container">
+        <div class="logo-wrapper">
+            <a th:href="@{/scroll}">
+                <img th:src="@{/images/Gemini_Generated_Image_n0fhaen0fhaen0fh.jpeg}" alt="Nile Care Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <button class="close-menu-btn" aria-label="Close menu">
+                <span>&#x2715;</span>
+            </button>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#book">BOOK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#service_area">SERVICE AREAS</a></li>
+                
+                
+                <li><a href="#book" class="book-ride-btn">BOOK A RIDE</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</header>
+
+
+<section id="home" class="hero-section">
+    <div class="slideshow-container">
+        <a class="prev">&#10094;</a>
+        <div class="mySlides fade">
+           
+            <img th:src="@{/images/dogeGrand.jpeg}" alt="Wheelchair accessible van" class="hero-image">
+            <div class="centered">
+                <h1 class="hero-title">Reliable Non-Emergency Medical Transportation</h1>
+                <p class="hero-subtitle">Your comfort and safety are our priority.</p>
+                <a href="#book" class="hero-button">BOOK</a>
+            </div>
+        </div>
+        <div class="mySlides fade">
+           
+            <img th:src="@{/images/mountRainer2.jpeg}" alt="Scenic view" class="hero-image">
+            <div class="centered">
+                <h1 class="hero-title">Safe and Comfortable Transportation</h1>
+                <p class="hero-subtitle">We get you where you need to be, on time.</p>
+                <a href="#services" class="hero-button">Our Services</a>
+            </div>
+        </div>
+        <div class="mySlides fade">
+             <img th:src="@{/images/seattle2.jpeg}" alt="City skyline" class="hero-image">
+            <div class="centered">
+                <h1 class="hero-title">Dedicated to Your Well-Being</h1>
+                <p class="hero-subtitle">Professional and compassionate service.</p>
+                <a href="#contact" class="hero-button">Contact Us</a>
+            </div>
+        </div>
+        <a class="next">&#10095;</a>
+    </div>
+    <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section id="services" class="services-section">   
+    <div class="container">
+        <div class="section-header">
+        
+            <h2 style="color: #007bff">Services Designed to Meet Every Need</h2>
+            <p><strong>At Nile Care, we're dedicated to providing you with exceptional transportation services. We prioritize your comfort, safety, and well-being, delivered with genuine care and professionalism.</strong></p>
+        </div>
+        <div class="service-boxes">
+            <div class="service-box">
+                <img th:src="@{/images/wheelchair.png}" alt="Green wheelchair icon">
+                <h3 style="color: #04AA6D">Wheelchair Support</h3>
+                <p>Specialized transport for individuals with mobility challenges.</p>
+            </div>
+            <div class="service-box">
+                <img th:src="@{/images/walk.png}" alt="Walking person icon">
+                <h3 style="color: #04AA6D">Ambulatory Transportation</h3>
+                <p>Comfortable transport for those who can walk independently.</p>
+            </div>
+            <div class="service-box">
+                <img th:src="@{/images/first-aid-kit.png}" alt="Medical bag icon">
+                <h3 style="color: #04AA6D">Post-Surgical Care Transport</h3>
+                <p>Gentle and supportive transport for post-surgical recovery.</p>
+            </div>
+            <div class="service-box">
+                <img th:src="@{/images/social-care.png}" alt="People socializing icon">
+                <h3 style="color: #04AA6D">Social Activity Transport</h3>
+                <p>Comfortable rides for enjoying social outings and activities.</p>
+            </div>
+            <div class="service-box">
+                <img th:src="@{/images/healthcare-and-medical.png}" alt="People socializing icon">
+                <h3 style="color: #04AA6D">Home Healthcare Agencies</h3>
+                <p>For individuals receiving in-home healthcare, we provide transportation options to ensure they reach medical appointments with ease.</p>
+            </div>
+            <div class="service-box">
+                <img th:src="@{/images/dialysis.png}" alt="People socializing icon">
+                <h3 style="color: #04AA6D">Dialysis Centers</h3>
+                <p>We assist patients with kidney disease by offering dedicated transportation services to dialysis treatments. We do our best to make sure you always get to your appointments on time! Here for you when you need us!</p>
+            </div>
+        </div>
+        <div class="all-descriptions">
+            <h4>Service Descriptions</h4>
+            <div class="description-content">
+                <div class="description" id="wheelchair-desc">
+                    <h5>Wheelchair Support</h5>
+                    <p>Our wheelchair support service ensures safe and comfortable journeys for individuals with mobility challenges. We provide trained drivers and accessible vehicles equipped with ramps and secure tie-downs.</p>
+                </div>
+                <div class="description" id="ambulatory-desc">
+                    <h5>Ambulatory Transportation</h5>
+                    <p>Our ambulatory transportation service offers comfortable and supportive rides for individuals who can walk independently but may require assistance getting to and from their destination.</p>
+                </div>
+                <div class="description" id="post-surgical-desc">
+                    <h5>Post-Surgical Care Transport</h5>
+                    <p>We prioritize your well-being with our post-surgical care transport. Our drivers are trained to provide gentle and supportive assistance, ensuring a smooth and safe journey during your recovery.</p>
+                </div>
+                <div class="description" id="social-desc">
+                    <h5>Social Activity Transport</h5>
+                    <p>Enjoy social outings and activities with our comfortable and reliable transportation. We provide rides to social events, gatherings, and recreational activities, ensuring you stay connected with your community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section id="services2" class="service-section">
+    <div class="service-header">
+        <h2 class="service-title">OUR SERVICE</h2>
+        <p class="service-subtitle"><strong>Reliable And Safe Transportation Solutions</strong></p>
+    </div>
+    <div class="service-container">
+        <img th:src="@{/images/mountRainer2.jpeg}" alt="A scenic view of Mount Rainier" class="service-image">
+        <div class="service-text">
+            <h1>Non-Medical Transportation</h1>
+            <p>
+                Our non-medical transportation services provide safe, reliable, and convenient transport for individuals who require assistance getting to appointments, social engagements, or other activities. We prioritize comfort and safety to ensure a pleasant travel experience.
+            </p>
+            <p>
+                Our trained drivers are dedicated to meeting your needs, offering door-to-door service and assistance as needed. Whether you require transportation for a medical appointment, a grocery run, or a family visit, we are here to help you stay connected and independent.
+            </p>
+            <p>
+                <strong>Why Choose Us?</strong><br>
+                - Professional and trained drivers<br>
+                - Comfortable and accessible vehicles<br>
+                - Flexible scheduling and booking options<br>
+                - Commitment to safety and punctuality
+            </p>
+        </div>
+    </div>
+</section> -->
+
+
+<section id="about">
+    
+     <div class="about-header">
+        <!-- <h1 style="color: #04AA6D">About US</h1>
+        <p> <strong>Releable And Safe Transportation Solutions</strong></p> -->
+    </div>
+        <div class="about-container">
+            <img th:src="@{/images/aboutUsImage.jpeg}" alt="Our Team" class="about-image">
+            <div class="about-text">
+               <h1 style="color: #007bff">ABOUT US</h1>
+               <div class="paragraph-box">
+	               	<p>
+	                	<strong>Our Expertise:</strong> We are a team of three experienced CDL drivers, boasting over 10 years of professional driving experience in passenger transportation. Throughout our careers, we've safely transported over 10,000 customers, consistently prioritizing safety, reliability, and exceptional service.
+		            </p>
+		        </div>
+		        <div class="paragraph-box">
+		            <p>
+		                <strong>Our Mission:</strong> We founded this Non-Emergency Medical Transportation (NEMT) business to address the critical need for accessible and dependable transportation in our community. We understand the challenges faced by elderly individuals and people with disabilities in accessing reliable transportation for medical appointments, therapy sessions, and daily needs. Our mission is to bridge this gap by providing safe, comfortable, and wheelchair-accessible transportation.
+		            </p>
+		        </div>
+		        <div class="paragraph-box">
+		            <p>
+		                <strong>Our Commitment:</strong> At our core, we are committed to delivering high-quality, on-time service with a personal touch. We recognize that medical transportation is more than just a journey; it's about ensuring our passengers feel safe, respected, and cared for throughout their experience.
+		            </p>
+		         </div>
+		         <div class="paragraph-box">
+		            <p>
+		                <strong>Our Services:</strong> Whether you require transportation to a doctor’s appointment, dialysis treatment, rehabilitation center, or any other medical facility, we are here to assist. Our team is dedicated to simplifying transportation and making it more accessible for those who need it most.
+		            </p>
+		          </div>
+		         <div class="paragraph-box">
+		              <p>
+		                <strong>Your Trusted Partner:</strong> Let us be your reliable transportation partner, ensuring that you or your loved ones reach your destinations safely and comfortably.
+		             </p>
+	             </div>
+            </div>
+        </div>
+   
+</section>
+
+
+<section id="book" class="booking-section">
+    <div class="container">
+        <h2>Book a Ride</h2>
+       
+        <div class="booking-content">
+            <form th:action="@{/book-ride}" method="post" th:object="${booking}" class="booking-form" id="rideForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="date"><span class="required-star">*</span> Pickup Date:</label>
+                        <input type="date" id="date" th:field="*{date}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time"><span class="required-star">*</span> Pickup Time:</label>
+                        <input type="time" id="time" th:field="*{time}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="wheelchairYes">Wheelchair?</label>
+                        <label><input type="radio" id="wheelchairYes" th:field="*{wheelchair}" value="true" checked> Yes</label>
+                        <label for="wheelchairNo"><input type="radio" id="wheelchairNo" th:field="*{wheelchair}" value="false"> No</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="roundTripYes">Round Trip?</label>
+                        <label><input type="radio" id="roundTripYes" th:field="*{roundTrip}" value="true" checked> Yes</label>
+                        <label for="roundTripNo"><input type="radio" id="roundTripNo" th:field="*{roundTrip}" value="false"> No</label>
+                    </div>
+                    <div class="form-group">
+                        
+                        <label for="passengers"><span class="required-star">*</span> Number of Passengers:</label>
+					    <select id="passengers" name="passengers" required>
+					        <option value="">Select</option>
+					        <option value="1">1</option>
+					        <option value="2">2</option>
+					        <option value="3">3</option>
+					        <option value="4">4</option>
+					        <option value="5">5</option>
+					        <option value="6">6</option>
+					        <option value="7">7</option>
+					    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name"><span class="required-star">*</span> Passenger Name:</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" th:field="*{name}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><span class="required-star">*</span> Phone Number:</label>
+                        <input type="tel" id="phone" placeholder="Enter Your Phone" th:field="*{phone}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><span class="required-star">*</span> Email:</label>
+                        <input type="email" id="email" placeholder="Enter Your Email" th:field="*{email}" required>
+                    </div>
+                    <fieldset class="address-fieldset">
+                        <legend><span class="required-star">*</span> Pick-up Address</legend>
+                        <div class="form-group">
+                            <label for="pickupStreet"><span class="required-star">*</span> Street Address:</label>
+                            <input type="text" id="pickupStreet" th:field="*{pickupStreet}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickupCity"><span class="required-star">*</span> City:</label>
+                            <input type="text" id="pickupCity" th:field="*{pickupCity}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickupState"><span class="required-star">*</span> State:</label>
+                            <select id="pickupState" th:field="*{pickupState}" required>
+                                <option value="">Select State</option>
+                                <option value="WA" selected>Washington</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickupZip"><span class="required-star">*</span> Zip Code:</label>
+                            <input type="text" id="pickupZip" th:field="*{pickupZip}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickupInstructions">Pick-up Instructions:</label>
+                            <textarea id="pickupInstructions" name="pickupInstructions"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="address-fieldset">
+                        <legend><span class="required-star">*</span> Drop-off Address</legend>
+                        <div class="form-group">
+                            <label for="dropoffStreet"><span class="required-star">*</span> Street Address:</label>
+                            <input type="text" id="dropoffStreet" th:field="*{dropoffStreet}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffCity"><span class="required-star">*</span> City:</label>
+                            <input type="text" id="dropoffCity" th:field="*{dropoffCity}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffState"><span class="required-star">*</span> State:</label>
+                            <select id="dropoffState" th:field="*{dropoffState}" required>
+                                <option value="">Select State</option>
+                                <option value="WA" selected>Washington</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffZip"><span class="required-star">*</span> Zip Code:</label>
+                            <input type="text" id="dropoffZip" th:field="*{dropoffZip}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropoffInstructions">Drop-off Instructions:</label>
+                            <textarea id="dropoffInstructions" name="dropoffInstructions"></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-group">
+                        <label for="additionalMessage">Additional Message:</label>
+                        <textarea id="additionalMessage" th:field="*{additionalMessage}" rows="4" cols="50"></textarea>
+                    </div>
+                    
+                    
+                   <div class="form-group">
+                        <label class="robot-check-label">
+                            <input type="checkbox" id="robotCheck" name="robotCheck" class="robot-check-input">
+                            <span class="robot-check-visual"></span>
+                            I am not a robot
+                        </label>
+                        <div id="robotCheckMessage" style="color: red; display: none;">Please confirm you are not a robot.</div>
+                    </div>
+                    
+                </div>
+                </div>
+                
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <div id="map" class="bookingmap-containerr"></div>
+            <div id="route-info" class="route-info"></div>
+        </div>
+        <div id="directions-panel" class="directions-panel"></div>
+        <div id="loading"></div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script th:src="@{/js/bookRide.js}"></script>
+
+
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>We're here to assist you with any inquiries regarding our non-emergency medical transportation services in the Washington, King County metro area. Whether you're interested in scheduling a ride, exploring partnership opportunities, or simply have questions or feedback, please reach out to us. We're committed to providing you with prompt and helpful assistance. Use the form below to send us a message, or find our direct contact information in the section beside it.</p>
+
+        <div class="contact-content">
+            <div class="contact-form" id="contactForm">
+                <h3>Send Us a Message</h3>
+    
+                <form th:action="@{/sendContactForm}" method="post" th:object="${contactForm}" id="contactFormElement">
+                    <div>
+                        <label for="formName"><span class="required-star">*</span> Name:</label>
+                        <input type="text" id="formName" placeholder="Enter Your Name" th:field="*{formName}" required>
+                        <span id="nameError" class="error-message"></span>
+                    </div>
+                    <div>
+                        <label for="formPhone"><span class="required-star">*</span> Phone Number:</label>
+                        <input type="tel" id="formPhone" placeholder="Enter Your Phone" th:field="*{formPhone}" required>
+                        <span id="phoneError" class="error-message"></span>
+                    </div>
+                    <div>
+                        <label for="formEmail"><span class="required-star">*</span> Email:</label>
+                        <input type="email" id="formEmail" placeholder="Enter Your Email" th:field="*{formEmail}" required>
+                        <span id="emailError" class="error-message"></span>
+                    </div>
+                    <div>
+                        <label for="formMessage"> Message:</label>
+                   		<textarea id="formMessage" th:field="*{formMessage}" rows="4" cols="50"></textarea>
+                        <span id="messageError" class="error-message"></span>
+                    </div>
+                    <button type="submit" class="blue-button">Send Message</button>
+                   
+                    
+                    
+                </form>
+            </div>
+            <div class="contact-info" id="successMessage" style="display: none;">
+                <h1 th:text="${successMessage}"></h1>
+                <h3>Thank you for your message!</h3>
+                <p>We will get back to you shortly.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> <a href="tel:+12064714574">206-471-4574</a></p>
+                <p><strong>Email:</strong> <a href="nilecaretransportation@gmail.com">nilecaretransportation@gmail.com</a></p>
+                <p><strong>Hours of Operation:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script th:src="@{/js/contactUs.js}"></script>
+
+
+
+<section id="service_area" class="service-area-section">
+    <div class="container">
+        <div class="service-area-header">
+            <h1>Our Service Areas</h1>
+            <p>We provide safe, reliable, and compassionate non-emergency medical transportation in the following areas:</p>
+        </div>
+
+        <div class="containerServiceArea">
+            <div class="map-navigation-container">
+                <div id="mape" class="map-container"></div>
+                <div class="county-navigation">
+                    <button class="county-button" data-county="king">King County</button>
+                    <button class="county-button" data-county="snohomish">Snohomish County</button>
+                    <button class="county-button" data-county="pierce">Pierce County</button>
+                </div>
+            </div>
+            <div id="city-list" class="city-list"></div>
+        </div>
+    </div>
+</section>
+	<script th:src="@{/js/serviceArea.js}"></script>
+ 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Phone: 206-471-4574</p>
+            <p>Phone: 206-513-8133</p>
+            <p>Phone: 702-927-9405</p>
+        </div>
+        <div class="footer-section">
+            <h3>Address</h3>
+            <p>16043 Military RD S, Seatac, WA, 98188</p>
+        </div>
+        <div class="footer-section">
+            <h3>Social Media</h3>
+            <ul class="social-media-list">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/nile_care_transport/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2025 Nile Care Transportation. All Rights Reserved.</p>
+</footer>
+
+
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/slidEmage.js}"></script>
+
+</body>
+</html>
