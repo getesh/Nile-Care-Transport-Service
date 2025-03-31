@@ -1,21 +1,14 @@
 package com.NEMT.Niel.Care.Transportation.controller;
 
 import com.NEMT.Niel.Care.Transportation.model.Booking;
-import com.NEMT.Niel.Care.Transportation.model.TestModel;
 import com.NEMT.Niel.Care.Transportation.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.sql.Time;
-import java.util.Date;
 
 @Controller
 public class BookingController {
@@ -31,7 +24,6 @@ public class BookingController {
     @PostMapping("/book-ride")
     public String bookRidePost(@ModelAttribute Booking booking, Model model) {
       
-
         try {
         	bookingService.sendBookingEmail(booking);
         	model.addAttribute("delay", 3000);
@@ -55,7 +47,7 @@ public class BookingController {
             model.addAttribute("errorMessage", "Oops! There was an error sending Ride Request. Please try again later.");
             e.printStackTrace(); // Print the error for debugging
         }
-        System.out.println("Code Reached Here Two");
+        
 
         return "emailForm";
     }

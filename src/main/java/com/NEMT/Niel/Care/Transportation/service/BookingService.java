@@ -2,9 +2,6 @@ package com.NEMT.Niel.Care.Transportation.service;
 
 import com.NEMT.Niel.Care.Transportation.model.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
-
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -40,12 +37,9 @@ public class BookingService {
                         "dropoffInstructions: " + booking.getDropoffInstructions() + "\n" +
                         "Additional Message: " + booking.getAdditionalMessage()
         );
-        System.out.print("Mail send service");
+        
         mailSender.send(message);
-        System.out.print("Mail send Two");
-        message.setTo(booking.getEmail());
-        message.setSubject("Booking Ride Confermaion");
-        mailSender.send(message);
+      
     }
 }
 

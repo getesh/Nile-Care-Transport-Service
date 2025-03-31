@@ -280,9 +280,8 @@ nav.show + .menu-toggle {
 }
 
 
-/* Hero Section Styles */
-/* ... (rest of your CSS remains the same) ... */
-/*========================================Slide Image for home page ===========================*/
+
+/*======================================== Slide Image for home page ===========================*/
 /* Slideshow container */
 .hero-section {
     position: relative;
@@ -456,7 +455,7 @@ nav.show + .menu-toggle {
 /*======================================== Slide Image for home page end======================*/
 
 
-/*======================================== Service Page Start Here  ===========================*/
+/*======================================== CSS for Service Page Start Here || this part is deleted from the screen just keeping the CSS part===========================*/
 
 /* services2.css */
 /* services2.css */
@@ -644,7 +643,7 @@ nav.show + .menu-toggle {
 
 
 /*===========================ABout Us Page Begins ===============*/
-/* ... (Your existing CSS styles) ... */
+
 .contact-section {
     padding: 80px 0;
     background-color: #f4f7f9; /* Light, slightly warmer background */
@@ -805,6 +804,7 @@ nav.show + .menu-toggle {
         padding: 30px;
     }
 }
+
 /*===========================ABout Us Page Begins ===============*/
 
 
@@ -1204,7 +1204,7 @@ button[type="submit"] {
 }
 
 footer {
-    background-color: #333; /* Set footer background to match header */
+    background-color: #333; 
     color: #fff;
     padding: 2rem 0;
     text-align: center;

@@ -1,9 +1,6 @@
 package com.NEMT.Niel.Care.Transportation.model;
 
 
-import java.sql.Time;
-import java.util.Date;
-
 public class Booking {
 
     private String pickupStreet;

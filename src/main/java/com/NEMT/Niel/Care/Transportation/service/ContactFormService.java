@@ -13,13 +13,13 @@ public class ContactFormService {
 	 	@Autowired
 	    private JavaMailSender emailSender;
 	 	
-	    private String email = "kirrosgoitom@gmail.com";
+	    private String email = "nilecaretransportation@gmail.com";
 	    
 	 
 
 	    public void sendEmail(ContactForm contactForm) {
 	        SimpleMailMessage message = new SimpleMailMessage();
-	        message.setTo(email);
+	        message.setTo(contactForm.getFormEmail());
 	        message.setSubject("CONTACT US:");
 	      
 	        message.setText(
