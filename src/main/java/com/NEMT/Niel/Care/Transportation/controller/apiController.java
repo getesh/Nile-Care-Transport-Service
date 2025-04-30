@@ -20,7 +20,7 @@ public class apiController {
     public String getScroll(Model model) {
         model.addAttribute("booking", new Booking());
         model.addAttribute("contactForm", new ContactForm());
-        return "scrollTest";
+        return "index";
     }
     
     @PostMapping("/sendContactForm")
